@@ -1,0 +1,6 @@
+logging:
+    log_file_path: /logs/main.log
+    logging_level: DEBUG
+scraping:
+    url: https://autoplius.lt/skelbimai/naudoti-automobiliai?make_id=19524
+    selector_announcement: .announcement-item
