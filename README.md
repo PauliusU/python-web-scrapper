@@ -1,16 +1,51 @@
-<!-- TOC -->
-* [python-web-scrapper](#python-web-scrapper)
-  * [Usage](#usage)
-  * [Requirements](#requirements)
-  * [Optional requirements](#optional-requirements)
-<!-- TOC -->
-
 # python-web-scrapper
 
 Practical Project 1 for Artificial Intelligence studies to
 solidify Python basics by practicing.
 
+<!-- TOC -->
+* [python-web-scrapper](#python-web-scrapper)
+  * [Usage](#usage)
+      * [Automatic setup](#automatic-setup)
+      * [Manual setup](#manual-setup)
+  * [Requirements](#requirements)
+  * [Optional requirements](#optional-requirements)
+<!-- TOC -->
+
 ## Usage
+
+#### Automatic setup
+For Windows installation just **run automatic setup script** in Git Bash:
+```bash
+git clone https://github.com/PauliusU/python-web-scrapper.git && cd python-web-scrapper && setup.sh
+```
+
+#### Manual setup
+
+1. Clone this repo:
+```bash
+git clone https://github.com/PauliusU/python-web-scrapper.git
+```
+
+2. cd into project:
+```bash
+cd python-web-scrapper
+```
+
+3. Ensure pipenv is installed:
+```bash
+pip install --upgrade pipenv --user
+```
+
+4. Install dependencies:
+```bash
+pipenv install
+```
+
+4. Activate virtual environment:
+```bash
+pipenv shell
+```
 
 ## Requirements
 
