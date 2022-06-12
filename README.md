@@ -1,5 +1,7 @@
 # python-web-scrapper
 
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PauliusU/balance_checker/blob/master/LICENSE)
+
 Practical Project 1 (PP1) for Artificial Intelligence studies to
 solidify Python basics by practicing.
 
