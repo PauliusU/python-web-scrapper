@@ -14,13 +14,13 @@ solidify Python basics by practicing.
 
 ## Usage
 
-#### Automatic setup
+#### Automatic launch
 For Windows installation just **run automatic setup script** in Git Bash:
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/PauliusU/python-web-scrapper/master/setup.sh)
 ```
 
-#### Manual setup
+#### Manual launch
 
 1. Clone this repo:
 ```bash
@@ -62,9 +62,14 @@ curl https://chromedriver.storage.googleapis.com/102.0.5005.61/chromedriver_win3
 unzip driver.zip
 ```
 
-9. Navigate back to root folder:
+9. Navigate back to project root folder:
 ```bash
 cd ..
+```
+
+10. Run project:
+```bash
+python ./src/python-web-scrapper/main.py
 ```
 
 ## Requirements
