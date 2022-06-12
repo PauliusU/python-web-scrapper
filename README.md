@@ -17,7 +17,7 @@ solidify Python basics by practicing.
 #### Automatic setup
 For Windows installation just **run automatic setup script** in Git Bash:
 ```bash
-git clone https://github.com/PauliusU/python-web-scrapper.git && cd python-web-scrapper && setup.sh
+git clone https://github.com/PauliusU/python-web-scrapper.git && cd python-web-scrapper && ./setup.sh
 ```
 
 #### Manual setup
@@ -27,9 +27,9 @@ git clone https://github.com/PauliusU/python-web-scrapper.git && cd python-web-s
 git clone https://github.com/PauliusU/python-web-scrapper.git
 ```
 
-2. cd into project:
+2. Navigate into project:
 ```bash
-cd python-web-scrapper
+cd python-web-scrapper/
 ```
 
 3. Ensure pipenv is installed:
@@ -42,9 +42,29 @@ pip install --upgrade pipenv --user
 pipenv install
 ```
 
-4. Activate virtual environment:
+5. Activate virtual environment:
 ```bash
 pipenv shell
+```
+
+6. Navigate `/bin` folder:
+```bash
+cd bin/
+```
+
+7. Download [ChromeDriver](https://sites.google.com/chromium.org/driver/) (WebDriver for Chrome)
+```bash
+curl https://chromedriver.storage.googleapis.com/102.0.5005.61/chromedriver_win32.zip -L -o driver.zip
+```
+
+8. Unzip ChromeDriver
+```bash
+unzip driver.zip
+```
+
+9. Navigate back to root folder:
+```bash
+cd ..
 ```
 
 ## Requirements
