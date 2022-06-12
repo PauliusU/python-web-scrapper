@@ -17,7 +17,7 @@ solidify Python basics by practicing.
 #### Automatic setup
 For Windows installation just **run automatic setup script** in Git Bash:
 ```bash
-git clone https://github.com/PauliusU/python-web-scrapper.git && cd python-web-scrapper && ./setup.sh
+bash <(curl -s https://raw.githubusercontent.com/PauliusU/python-web-scrapper/master/setup.sh)
 ```
 
 #### Manual setup
