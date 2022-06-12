@@ -1,2 +1,6 @@
+!.gitkeep
 .idea/
 .vscode/
+__pycache__/
+bin/
+logs/

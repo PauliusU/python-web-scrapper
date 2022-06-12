@@ -1,9 +1,30 @@
+from pathlib import Path
+import logging
+import os
 import yaml
-
-config_path = "../../config/config.yml"
 
 
 def get_config() -> dict:
-    """ Loads config from YML file """
-    with open(config_path, "r") as yml_file:
-        return yaml.safe_load(yml_file)
+    """ Loads config from YML file and sets up logging """
+    try:
+        project_root = Path(__file__).parent.parent.parent
+        config_path = os.path.join(project_root, 'config', 'config.yml')
+
+        with open(config_path, "r") as yml_file:
+            config = yaml.safe_load(yml_file)
+
+        log_file_path = os.path.join(project_root, 'logs',
+                                     config["logging"]["log_file_name"])
+        print(log_file_path)
+        date_strftime_format = "%Y-%m-%d %H:%M:%S"
+        logging.basicConfig(filename=log_file_path,
+                            filemode='a',
+                            datefmt=date_strftime_format,
+                            format='[%(levelname)s] %(asctime)s: %(message)s',
+                            level=logging.DEBUG)
+        logging.info('Configuration loaded')
+        return config
+
+    except Exception as err:
+        print(err)
+        logging.error('Configuration failed to load')

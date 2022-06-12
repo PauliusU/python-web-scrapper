@@ -82,14 +82,14 @@ you can go as in depth as you like.
 items page + item page) - this is the minimal requirement to get a positive grade.
 - [X] You can use any library / framework, but if you use bs4, selenium, requests-html please use
 recommended python project structure.
-- [ ] It must contain a config file - you decide what parameters need to be configurable, simple
+- [X] It must contain a config file - you decide what parameters need to be configurable, simple
 options: url, selectors, port, logging level, etc.
-- [ ] It must log errors to a centralized file - at least one log file, for example main.log.
+- [X] It must log errors to a centralized file - at least one log file, for example main.log.
 - [X] Code is hosted in GitHub (can be private, but please invite the teacher as a collaborator to
 verify the project) with at least 3 commits, containing readme file with launch instructions
 (document how to launch the project easily), requirements.txt (or equivalent).
 
-## Optional requirements
+## Optional requirements (to be done later)
 
 - [ ] Write some unit tests (pytest)
 - [ ] Incorporate excel file processing
