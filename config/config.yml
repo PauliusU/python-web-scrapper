@@ -1,5 +1,7 @@
 logging:
     log_file_name: main.log
 scraping:
+    driver_path: chromedriver.exe
     url: https://autoplius.lt/skelbimai/naudoti-automobiliai?make_id=19524
+    selector_title: .js-search-title
     selector_announcement: .announcement-item
