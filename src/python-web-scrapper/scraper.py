@@ -24,7 +24,7 @@ def scrape_site(config) -> None:
         driver_path = os.path.join(project_root, 'drivers',
                                    config["scraping"]["driver_path"])
 
-        car_announcements = {}
+        cars = {}
 
         logging.info(f"Setting up webdriver")
         service = ChromeService(driver_path)
@@ -53,11 +53,12 @@ def scrape_site(config) -> None:
                                                             selector_price)
 
                 for i in range(0, len(elements_with_titles)):
-                    car_announcements[elements_with_titles[i].text] = \
+                    unique_key = f'[{page_index + 1}:{i + 1}] {elements_with_titles[i].text}'
+                    cars[unique_key] = \
                         elements_with_prices[i].text
 
-        for title in car_announcements:
-            print(f"{title} : {car_announcements[title]}")
-        logging.info(f'Number of items: {len(car_announcements)}')
+        for title in cars:
+            print(f"{title}: {cars[title]}")
+        logging.info(f'Number of cars: {len(cars)}')
     except Exception as err:
         logging.error(f'Scrapping error {err}')
