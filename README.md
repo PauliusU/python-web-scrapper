@@ -49,9 +49,9 @@ pipenv install
 pipenv shell
 ```
 
-6. Navigate `/bin` folder:
+6. Navigate `drivers/` folder:
 ```bash
-cd bin/
+cd drivers/
 ```
 
 7. Download [ChromeDriver](https://sites.google.com/chromium.org/driver/) (WebDriver for Chrome)
