@@ -11,7 +11,7 @@ solidify Python basics by practicing.
       * [Automatic launch](#automatic-launch)
       * [Manual launch](#manual-launch)
   * [Requirements](#requirements)
-  * [Optional requirements (to be done later)](#optional-requirements--to-be-done-later-)
+  * [Optional requirements [to be done later]](#optional-requirements-to-be-done-later)
 <!-- TOC -->
 
 ## Usage
@@ -89,7 +89,7 @@ options: url, selectors, port, logging level, etc.
 verify the project) with at least 3 commits, containing readme file with launch instructions
 (document how to launch the project easily), requirements.txt (or equivalent).
 
-## Optional requirements (to be done later)
+## Optional requirements [to be done later]
 
 - [ ] Write some unit tests (pytest)
 - [ ] Incorporate excel file processing
