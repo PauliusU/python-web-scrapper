@@ -3,5 +3,6 @@ logging:
 scraping:
     driver_path: chromedriver.exe
     url: https://autoplius.lt/skelbimai/naudoti-automobiliai?make_id=19524
+    page_title_text: Tesla Naudoti automobiliai
     selector_title: .js-search-title
     selector_announcement: .announcement-item
