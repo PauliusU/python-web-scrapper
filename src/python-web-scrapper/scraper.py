@@ -12,31 +12,31 @@ from selenium.webdriver.support.wait import WebDriverWait
 def scrape_site(config) -> None:
     """ Scrapes website using provided settings """
     try:
-        logging.info(f"Loading scraping configuration (URL, selectors, etc.)")
-        base_url = config["scraping"]["base_url"]
-        pages_to_scrape = config["scraping"]["pages_to_scrape"]
-        page_title_text = config["scraping"]["page_title_text"]
-        page_title_selector = config["scraping"]["page_title_selector"]
-        selector_title = config["scraping"]["selector_title"]
-        selector_price = config["scraping"]["selector_price"]
+        logging.info(f'Loading scraping configuration (URL, selectors, etc.)')
+        base_url = config['scraping']['base_url']
+        pages_to_scrape = config['scraping']['pages_to_scrape']
+        page_title_text = config['scraping']['page_title_text']
+        page_title_selector = config['scraping']['page_title_selector']
+        selector_title = config['scraping']['selector_title']
+        selector_price = config['scraping']['selector_price']
 
         project_root = Path(__file__).parent.parent.parent
         driver_path = os.path.join(project_root, 'drivers',
-                                   config["scraping"]["driver_path"])
+                                   config['scraping']['driver_path'])
 
         cars = {}
 
-        logging.info(f"Setting up webdriver")
+        logging.info('Setting up webdriver')
         service = ChromeService(driver_path)
         options = webdriver.ChromeOptions()
 
         with webdriver.Chrome(service=service, options=options) as driver:
             for page_index in range(0, pages_to_scrape):
-                url = f"{base_url}{page_index + 1}"
+                url = f'{base_url}{page_index + 1}'
                 logging.info(f'Getting {url}')
                 driver.get(url)
 
-                logging.info(f"Waiting for the page to load")
+                logging.info(f'Waiting for the page to load')
                 logging.info(driver.title)
 
                 delay = 20
@@ -57,8 +57,8 @@ def scrape_site(config) -> None:
                     cars[unique_key] = \
                         elements_with_prices[i].text
 
-        for title in cars:
-            print(f"{title}: {cars[title]}")
+        for car_title in cars:
+            print(f'{car_title}: {cars[car_title]}')
         logging.info(f'Number of cars: {len(cars)}')
     except Exception as err:
         logging.error(f'Scrapping error {err}')

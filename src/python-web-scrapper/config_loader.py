@@ -12,12 +12,12 @@ def get_config() -> dict:
         project_root = Path(__file__).parent.parent.parent
         config_path = os.path.join(project_root, 'config', 'config.yml')
 
-        with open(config_path, "r") as yml_file:
+        with open(config_path, 'r') as yml_file:
             config = yaml.safe_load(yml_file)
 
         log_file_path = os.path.join(project_root, 'logs',
-                                     config["logging"]["log_file_name"])
-        date_strftime_format = "%Y-%m-%d %H:%M:%S"
+                                     config['logging']['log_file_name'])
+        date_strftime_format = '%Y-%m-%d %H:%M:%S'
         logging.basicConfig(filename=log_file_path,
                             filemode='a',
                             datefmt=date_strftime_format,
@@ -25,6 +25,7 @@ def get_config() -> dict:
                             level=logging.DEBUG)
 
         # Also print logging messages to print to stdout
+        # Source: https://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout
         # Source: https://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout
         logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
 
