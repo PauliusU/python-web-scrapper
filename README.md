@@ -8,10 +8,10 @@ solidify Python basics by practicing.
 <!-- TOC -->
 * [python-web-scrapper](#python-web-scrapper)
   * [Usage](#usage)
-      * [Automatic setup](#automatic-setup)
-      * [Manual setup](#manual-setup)
+      * [Automatic launch](#automatic-launch)
+      * [Manual launch](#manual-launch)
   * [Requirements](#requirements)
-  * [Optional requirements](#optional-requirements)
+  * [Optional requirements (to be done later)](#optional-requirements--to-be-done-later-)
 <!-- TOC -->
 
 ## Usage
