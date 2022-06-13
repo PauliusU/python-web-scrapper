@@ -76,9 +76,9 @@ python ./src/python-web-scrapper/main.py
 
 ## Requirements
 
-- [ ] Scrape one or more websites, that are publicly available - it can be a minimal project, or
+- [X] Scrape one or more websites, that are publicly available - it can be a minimal project, or
 you can go as in depth as you like.
-- [ ] It must scrape at least 2 kinds pages with navigation either in depth or breadth (e.g.:
+- [X] It must scrape at least 2 kinds pages with navigation either in depth or breadth (e.g.:
 items page + item page) - this is the minimal requirement to get a positive grade.
 - [X] You can use any library / framework, but if you use bs4, selenium, requests-html please use
 recommended python project structure.
